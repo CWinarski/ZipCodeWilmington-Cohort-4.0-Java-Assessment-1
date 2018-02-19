@@ -50,7 +50,7 @@ public class BasicArrayUtilsTest {
     public void getSecondToLastElementTest() {
         // Given
         String[] inputArray = {"The", "quick", "brown", "fox"};
-        String expected = "brown";
+        String expected = "fox";
 
         // When
         String actual = BasicArrayUtils.getSecondToLastElement(inputArray);

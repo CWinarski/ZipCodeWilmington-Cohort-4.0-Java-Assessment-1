@@ -1,5 +1,9 @@
 package com.zipcodewilmington.assessment1.part2;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 /**
  * Created by leon on 2/16/18.
  */
@@ -11,8 +15,22 @@ public class ArrayUtils {
      * Given an array of objects, named `objectArray`, and an object `objectToCount`, return the number of times the `objectToCount` appears in the `objectArray`
      */
     public static Integer getNumberOfOccurrences(Object[] objectArray, Object objectToCount) {
-        return null;
-    }
+
+
+            int objectCounter = 0;
+
+            for (Object element : objectArray) {
+
+                if (element == objectToCount) {
+
+                    objectCounter++;
+                }
+
+            }
+
+            return objectCounter;
+        }
+
 
     /**
      * @param objectArray    an array of any type of Object
@@ -20,8 +38,23 @@ public class ArrayUtils {
      * @return an array with identical content excluding the specified `objectToRemove`
      * Given an array of objects, name `objectArray`, and an object `objectToRemove`, return an array of objects with identical contents excluding `objectToRemove`
      */
-    public static Object[] removeValue(Object[] objectArray, Object objectToRemove) {
-        return null;
+    public static Integer[] removeValue(Object[] objectArray, Object objectToRemove) {
+        int removeValue = getNumberOfOccurrences(objectArray, objectToRemove);
+
+        Integer[] newObjectArray = new Integer[objectArray.length - removeValue];
+
+        int counter = 0;
+
+        for (int i = 0; i < objectArray.length; i++){
+
+            if (!objectArray[i].equals(objectToRemove)){
+
+                newObjectArray[counter] = (Integer)objectArray[i];
+                counter++;
+            }
+        }
+
+        return newObjectArray;
     }
 
     /**
@@ -50,6 +83,9 @@ public class ArrayUtils {
      * given two arrays `objectArray` and `objectArrayToAdd`, return an array containing all elements in `objectArray` and `objectArrayToAdd`
      */
     public static Object[] mergeArrays(Object[] objectArray, Object[] objectArrayToAdd) {
-        return null;
+        List mergeArrayList = new ArrayList(Arrays.asList(objectArray));
+        mergeArrayList.add(objectArrayToAdd);
+        Object[] mergedArrays = mergeArrayList.toArray();
+        return mergedArrays;
     }
 }

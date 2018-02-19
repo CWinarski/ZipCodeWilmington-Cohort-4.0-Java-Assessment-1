@@ -11,7 +11,8 @@ public class IntegerArrayUtilsTest {
     public void getSumTest() {
         // : Given
         Integer[] input = { 1, 2, 3, 4, 5};
-        Integer expected = 10;
+
+        Integer expected = 12;
 
         // : When
         Integer actual = IntegerArrayUtils.getSum(input);
@@ -37,7 +38,7 @@ public class IntegerArrayUtilsTest {
     public void getAverageTest() {
         // : Given
         Integer[] input = { 1, 2, 3, 4, 5};
-        Double expected = 2.4;
+        Double expected = 3.0;
 
         // : When
         Double actual = IntegerArrayUtils.getAverage(input);

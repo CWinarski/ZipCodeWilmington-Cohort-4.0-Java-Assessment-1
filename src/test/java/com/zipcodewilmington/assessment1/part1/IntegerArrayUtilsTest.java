@@ -38,7 +38,7 @@ public class IntegerArrayUtilsTest {
     public void getAverageTest() {
         // : Given
         Integer[] input = { 1, 2, 3, 4, 5};
-        Double expected = 2.4;
+        Double expected = 2.;
 
         // : When
         Double actual = IntegerArrayUtils.getAverage(input);

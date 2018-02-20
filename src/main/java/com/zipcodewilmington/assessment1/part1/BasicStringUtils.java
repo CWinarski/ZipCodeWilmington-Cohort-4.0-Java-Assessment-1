@@ -56,7 +56,7 @@ public class BasicStringUtils {
         for (char letter : letters){
             if (Character.isUpperCase(letter)){
                 letter = Character.toLowerCase(letter);
-            } else {
+            } else if (Character.isLowerCase(letter)){
                 letter = Character.toUpperCase(letter);
             }
 

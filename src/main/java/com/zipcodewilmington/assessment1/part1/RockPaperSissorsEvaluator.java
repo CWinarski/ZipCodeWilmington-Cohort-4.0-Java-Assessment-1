@@ -44,6 +44,17 @@ public class RockPaperSissorsEvaluator {
      * @return a string representative of the winning hand sign between the two players
      */
     public String getWinner(String handSignOfPlayer1, String handSignOfPlayer2) {
+
+        if (handSignOfPlayer1.equalsIgnoreCase(handSignOfPlayer2)){
+            return "Tie!";
+        } else if (handSignOfPlayer1.equals("rock") && handSignOfPlayer2.equals("paper") || handSignOfPlayer1.equals("paper") && handSignOfPlayer2.equals("rock")){
+            return"paper";
+        } else if(handSignOfPlayer1.equals("rock") && handSignOfPlayer2.equals("scissors") || handSignOfPlayer1.equals("scissors") && handSignOfPlayer2.equals("rock")){
+            return "rock";
+        }else if(handSignOfPlayer1.equals("scissors") && handSignOfPlayer2.equals("paper") || handSignOfPlayer1.equals("paper") && handSignOfPlayer2.equals("scissors")){
+            return "scissors";
+        }
+
         return null;
     }
 }

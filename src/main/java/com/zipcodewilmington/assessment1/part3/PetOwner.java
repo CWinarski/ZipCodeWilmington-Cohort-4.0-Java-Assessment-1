@@ -1,5 +1,7 @@
 package com.zipcodewilmington.assessment1.part3;
 
+
+
 /**
  * Created by leon on 2/16/18.
  */
@@ -8,20 +10,33 @@ public class PetOwner {
      * @param name name of the owner of the Pet
      * @param pets array of Pet object
      */
+    Pet[] pets;
     public PetOwner(String name, Pet... pets) {
+
     }
 
     /**
      * @param pet pet to be added to the composite collection of Pets
      */
     public void addPet(Pet pet) {
+        for (int i = 0; i < this.pets.length; i++) {
+            if (this.pets[i] == null) {
+                this.pets[i] = pet;
+                break;
+            }
+        }
     }
 
     /**
      * @param pet pet to be removed from the composite collection Pets
      */
     public void removePet(Pet pet) {
-
+        for (int i = 0; i < this.pets.length; i++) {
+            if (this.pets[i].equals(pet)) {
+                this.pets[i] = null;
+                break;
+            }
+        }
     }
 
     /**
